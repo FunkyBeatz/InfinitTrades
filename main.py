@@ -52,9 +52,6 @@ def create_pnl_image(symbol,
         # Try to use Roboto font (if uploaded as "Roboto.ttf") with consistent size
         font = ImageFont.truetype("Roboto.ttf",
                                   size=24)  # Size for readability in 400x200
-        # Test rendering with green and red to ensure consistency
-        draw.text((0, 0), "Test", font=font, fill='#00FF00')  # Green test
-        draw.text((0, 0), "Test", font=font, fill='#FF0000')  # Red test
     except Exception:
         # Fallback: Use default font
         font = ImageFont.load_default()
@@ -78,31 +75,8 @@ def create_pnl_image(symbol,
         fill='#FFFFFF')  # White text
 
     # P&L with triangle, price, %, and Late close/Long or Short - centered horizontally, bottom
-    # Ensure triangle symbols display correctly with multiple fallbacks
-    triangle_options = [
-        ("▲", "▼"),  # Unicode up/down triangles (U+25B2, U+25BC)
-        ("△", "▽"),  # Unicode white up/down triangles (U+25B3, U+25BD)
-        (
-            "▶", "▼"
-        ),  # Unicode right triangle/down triangle (U+25B6, U+25BC) as alternative
-        (
-            "▴", "▾"
-        )  # Unicode black up/down triangles (U+25B4, U+25BE) as final Unicode fallback
-    ]
-
-    triangle = None
-    for up, down in triangle_options:
-        try:
-            # Test if the font can render this triangle pair
-            draw.text((0, 0), up if pnl_percentage >= 0 else down, font=font)
-            triangle = up if pnl_percentage >= 0 else down
-            break
-        except UnicodeEncodeError:
-            continue
-
-    if triangle is None:
-        # Fallback to graphical symbols (e.g., ASCII or simple characters) if Unicode fails completely
-        triangle = "^" if pnl_percentage >= 0 else "v"  # Simple ASCII caret/down arrow as last resort
+    # Use simple ASCII symbols instead of Unicode triangles to avoid rendering issues
+    triangle = "+" if pnl_percentage >= 0 else "-"  # Simple plus/minus signs that work everywhere
 
     color = '#00FF00' if pnl_percentage >= 0 else '#FF0000'  # Green for profit, red for loss
     pnl_text = f"{triangle} ${current_price:.2f} ({pnl_percentage:.2f}%)"
