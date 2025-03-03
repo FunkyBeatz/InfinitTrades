@@ -2,7 +2,8 @@
 
 ## Overview
 
-Welcome to the **INF TRADES Discord Bot**, a specialized tool designed exclusively for administrators to calculate and display Profit & Loss (P&L) for options trading on SPY, QQQ, IWM, and NVDA. This bot delivers a minimalist, sleek design with a black background, using `+` for profit and `-` for loss indicators, ensuring a clean and professional user experience in Discord.
+Welcome to the **INF TRADES Discord Bot**, a specialized tool designed exclusively for administrators to calculate and display Profit & Loss (P&L) for options trading on SPY, QQQ, IWM, and NVDA. 
+This bot delivers a minimalist, sleek design with a black background, using `+` for profit and `-` for loss indicators, ensuring a clean and professional user experience in Discord.
 
 ### Key Features
 - **Admin-Only Access:** Restricted to users with Administrator permissions for secure usage.
