@@ -1,3 +1,14 @@
+## Follow Me on Social Media
+
+Stay connected and follow my work on social media:
+
+[![Follow me](https://img.shields.io/badge/Follow%20me-ffffff?logo=x&logoColor=000000)](https://x.com/FunkyxBeatz)
+
+[![Follow Web Frens](https://img.shields.io/badge/Follow%20Web%20Frens-ffffff?logo=x&logoColor=000000)](https://x.com/WebFrens_)
+
+
+[![Discord](https://img.shields.io/discord/1330332570847547433?label=Join%20the%20Community&logo=discord&logoColor=5865F2&color=5865F2)](https://discord.gg/gVEEv8Yswu)
+
 # INF TRADES Discord Bot
 
 ## Overview
@@ -117,9 +128,3 @@ This bot is tailored for INF TRADES and currently accepts contributions only fro
 
 ---
 
-## Follow Me on Social Media
-
-Stay connected and follow my work on social media:
-
-- **Main 𝕏 Account:** [FunkyxBeatz](https://x.com/FunkyxBeatz)
-- **Projects 𝕏 Account:** [WebFrens_](https://x.com/WebFrens_)
